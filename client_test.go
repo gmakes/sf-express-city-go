@@ -1,13 +1,11 @@
-# sf-express-city-go
-顺丰同城开放平台 golang sdk
+package sfexpresscitygo_test
 
-## 官方文档
+import (
+	"testing"
 
-https://commit-openic.sf-express.com/open/api/docs/index#/apidoc
+	sfexpresscitygo "github.com/gmakes/sf-express-city-go"
+)
 
-## 使用方法
-
-```go
 func TestPreCreateOrder(t *testing.T) {
 	expected := 200
 
@@ -35,4 +33,3 @@ func TestPreCreateOrder(t *testing.T) {
 
 	t.Logf("resp: %v", resp)
 }
-```
