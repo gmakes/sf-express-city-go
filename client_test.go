@@ -1,6 +1,7 @@
 package sfexpresscitygo_test
 
 import (
+	"fmt"
 	"testing"
 
 	sfexpresscitygo "github.com/gmakes/sf-express-city-go"
@@ -31,5 +32,5 @@ func TestPreCreateOrder(t *testing.T) {
 		t.Errorf("PreCreateOrder status actual = %d; expected %d", actual, expected)
 	}
 
-	t.Logf("resp: %v", resp)
+	fmt.Printf("resp: %v\n", resp)
 }

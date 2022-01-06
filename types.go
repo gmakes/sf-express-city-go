@@ -15,11 +15,11 @@ type (
 	}
 
 	Shop struct {
-		ShopName    string `json:""shop_name`    //(64)	空	是	店铺姓名
-		ShopPhone   string `json:""shop_phone`   //(64)	空	是	店铺电话
-		ShopAddress string `json:""shop_address` //(255)	空	是	店铺地址
-		ShopLng     string `json:""shop_lng`     //(32)	空	否	店铺经度
-		ShopLat     string `json:""shop_lat`     //(32)	空	否	店铺纬度
+		ShopName    string `json:"shop_name"`    //(64)	空	是	店铺姓名
+		ShopPhone   string `json:"shop_phone"`   //(64)	空	是	店铺电话
+		ShopAddress string `json:"shop_address"` //(255)	空	是	店铺地址
+		ShopLng     string `json:"shop_lng"`     //(32)	空	否	店铺经度
+		ShopLat     string `json:"shop_lat"`     //(32)	空	否	店铺纬度
 	}
 
 	MultiPickupInfo struct {
@@ -164,7 +164,7 @@ type (
 		PushTime     int    `json:"push_time"`     //(11)	0	是	取消时间；秒级时间戳
 	}
 
-	PreCancelRequest struct {
+	PreCancelOrderRequest struct {
 		DevId        int    `json:"dev_id"`        //(11)	0	是	api开发者ID
 		OrderId      string `json:"order_id"`      //(64)	0	是	订单ID
 		OrderType    int    `json:"order_type"`    //(11)	1	是	查询订单ID类型	1、顺丰订单号 2、商家订单号
