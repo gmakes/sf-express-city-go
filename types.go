@@ -42,7 +42,7 @@ type (
 		IsAppoint        int               `json:"is_appoint"`         // is_appoint	int(2)	0	是	是否是预约单	0：非预约单；1：预约单
 		AppointType      int               `json:"appoint_type"`       // appoint_type	int(2)	0	否	预约单类型	预约单的时候传入，1：预约单送达单；2：预约单上门单
 		ExpectTime       int               `json:"expect_time"`        // expect_time	int(11)	0	否	用户期望送达时间	若传入自此段且时间大于配送时效，则按照预约送达单处理，时间小于配送时效按照立即单处理；appoint_type=1时需必传,秒级时间戳
-		ExpectPickupTime int               `json:"expect_pickup_time"` // expect_pickup_time	int(11)	0	否	用户期望上门时间	appoint_type=2时需必传,秒级时间戳
+		//ExpectPickupTime int               `json:"expect_pickup_time"` // expect_pickup_time	int(11)	0	否	用户期望上门时间	appoint_type=2时需必传,秒级时间戳
 		LbsType          int               `json:"lbs_type"`           // lbs_type	int(2)	2	否	坐标类型，1：百度坐标，2：高德坐标
 		PayType          int               `json:"pay_type"`           // pay_type	int(11)	1	是	用户支付方式：1、已支付 0、货到付款
 		ReceiveUserMoney int               `json:"receive_user_money"` // receive_user_money	int(11)	0	否	代收金额	单位：分
