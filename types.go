@@ -125,7 +125,7 @@ type (
 		ShopId              string            `json:"shop_id"`               // shop_id	string(64)	0	是	店铺ID
 		ShopType            int               `json:"shop_type"`             // shop_type	int(11)	1	否	店铺ID类型	1：顺丰店铺ID ；2：接入方店铺ID
 		ShopOrderId         string            `json:"shop_order_id"`         // shop_order_id	string(64)	空	是	商家订单号	不允许重复
-		ShopPreparationTime int               `json:"shop_preparation_time"` // shop_preparation_time	int(64)	0	否	商家预计备餐时长	分钟级时间 比如: 10 分钟 则传入 10
+		//ShopPreparationTime int               `json:"shop_preparation_time"` // shop_preparation_time	int(64)	0	否	商家预计备餐时长	分钟级时间 比如: 10 分钟 则传入 10
 		OrderSource         string            `json:"order_source"`          // order_source	string(12)	空	是	订单接入来源	1：美团；2：饿了么；3：百度；4：口碑；其他请直接填写中文字符串值
 		OrderSequence       string            `json:"order_sequence"`        // order_sequence	string(12)	空	否	取货序号	与order_source配合使用，如：饿了么10号单，表示如下：order_source=2;order_sequence=10。用于骑士快速寻找配送物
 		LbsType             int               `json:"lbs_type"`              // lbs_type	int(2)	2	否	坐标类型	1：百度坐标，2：高德坐标
