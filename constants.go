@@ -47,6 +47,10 @@ const (
 	// 顺丰订单回调详细查看接口。可以订单维度查询所有的回调信息，并在回调信息接收出现问题的时候主动查询此接口进行订单状态同步。
 	GET_CALLBACK_INFO_FORMAT = API_PREFIX + "getcallbackinfo" + API_SUFFIX
 
+	// fee
+	// 订单创建后，骑士未接单的情况下通过该接口对订单进行加小费，促进订单接单 注意：小费单位都是分
+	ADD_ORDER_GRATUITY_FEE = API_PREFIX + "addordergratuityfee" + API_SUFFIX
+
 	// all callbacks
 	// 配送状态更改回调
 	// 骑士撤单状态回调

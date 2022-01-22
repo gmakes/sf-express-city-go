@@ -454,6 +454,27 @@ func (c *SFExpressCityClient) GetCallbackInfo(request *GetCallbackInfoRequest) (
 	return code, resp, nil
 }
 
+// {
+// 	"error_code": 0,
+// 	"error_msg": "",
+// 	"error_data": null,
+// 	"result": {
+// 			"sf_order_id": "3165848793513984",//顺丰订单号
+// 			"shop_order_id": "15104092022333",//商家订单号
+// 			"gratuity_fee": 10, //本次加小费金额
+// 			"total_gratuity_fee":20,//该订单总的加小费金额
+// 			"push_time": "1510680568" //推送时间
+// 	}
+// }
+func (c *SFExpressCityClient) AddOrderGratuityFee(request *AddOrderGratuityFeeRequest) (int, *Response, error) {
+	code, resp, err := c.do(ADD_ORDER_GRATUITY_FEE, request)
+	if err != nil {
+		return code, resp, err
+	}
+	// TODO format response
+	return code, resp, nil
+}
+
 func (c *SFExpressCityClient) do(apiFormat string, request interface{}) (int, *Response, error) {
 
 	payload, err := json.Marshal(request)
